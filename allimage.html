@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>TPS The Perfect Shine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="icons/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="styleimage.css">
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html"><img src="images/TPS_white_logo.png"></a>
+    <div class="nav-links" id="navLinks">
+        <i style="color: #fff;" class="fa fa-times" onClick="hideMenu()"></i>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about_us.html">OUR COMPANY</a></li>
+            <li><a href="ceramic_coating.html">CERAMIC COATING</a></li>
+            <li><a href="premium_care.html">PREMIUM CARE</a></li>
+            <li><a href="perfect_shine.html">PERFECT SHINE</a></li>
+            <li><a href="allimage.html">REVIEW</a></li>
+        </ul>
+    </div>
+    <i style="color: #fff;" class="fa fa-bars" onClick="showMenu()"></i>
+</nav>
+
+
+<input type="radio" name="Photos" id="check1" checked>
+<input type="radio" name="Photos" id="check2">
+<input type="radio" name="Photos" id="check3">
+<input type="radio" name="Photos" id="check4">
+
+<div class="container">
+    <h1 style="color: white;">PHOTO GALLERY</h1>
+
+    <div class="photo-gallery">
+        <div>
+           <img id="myImg" style="width: 100%; height: 100%; border-radius: 10px;" src="images/ccp1.png">
+        </div>  
+    </div>
+</div>
+
+<div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+  </div>
+  
+  <script>
+  var modal = document.getElementById("myModal");
+  
+  var img = document.getElementById("myImg");
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption");
+  img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
+  
+  var span = document.getElementsByClassName("close")[0];
+  
+  span.onclick = function() { 
+    modal.style.display = "none";
+  }
+  </script>
+
+<script>
+
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+    
+</script>
+
+</body>
+</html>
